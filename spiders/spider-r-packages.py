@@ -5,7 +5,7 @@ class RSpider(scrapy.Spider):
     start_urls = ['https://cran.r-project.org/web/packages/available_packages_by_date.html']
 
     def parse(self, response):
-        for package in response.xpath('//tr')[1:]:
+        for package in response.xpath('//tr')[1:20]:
             name = package.xpath('./td/a/text()').extract_first().strip()
             url = package.xpath('./td/a/@href').extract_first()
             day = package.xpath('./td[1]/text()').extract_first()
