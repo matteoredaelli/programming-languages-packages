@@ -1,1 +1,1 @@
-export LANGUAGES="nodejs python r ruby"
+export LANGUAGES="nodejs php python r ruby"

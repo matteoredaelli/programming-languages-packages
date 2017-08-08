@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-lang=python
+lang=php
 today=$(date +"%Y-%m-%d")
 yesterday=$(date -d "1 days ago" +"%Y-%m-%d")
 todayfile="data/${lang}-${today}.json"
