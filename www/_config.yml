@@ -2,4 +2,4 @@ title: Latest packages
 description: Fresh news about packages for programming languages
 show_downloads: false
 google_analytics:
-theme: 
+theme: jekyll-theme-hacker
