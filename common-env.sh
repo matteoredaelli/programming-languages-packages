@@ -1,1 +1,1 @@
-export LANGUAGES="nodejs php python r ruby"
+export LANGUAGES="elixir nodejs php python r ruby"

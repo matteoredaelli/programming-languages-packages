@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-lang=r
+lang=elixir
 file="data/$lang.json"
 touch $file
 rm $file

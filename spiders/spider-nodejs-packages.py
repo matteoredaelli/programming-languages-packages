@@ -18,7 +18,7 @@ for package in results['results']:
         item = {"language": "Nodejs"}
         item["name"] = package["doc"]["name"]        
         if "dist-tags" in package["doc"]:
-            item["release"] = package["doc"]["dist-tags"]["latest"]
+            item["version"] = package["doc"]["dist-tags"]["latest"]
         if "description" in package["doc"]: 
             item["description"] = package["doc"]["description"]
         if "time" in package["doc"]:
