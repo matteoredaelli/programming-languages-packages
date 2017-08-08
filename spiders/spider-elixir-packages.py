@@ -2,7 +2,8 @@ import scrapy
 
 class ElixirSpider(scrapy.Spider):
     name = 'elixir-spider'
-    start_urls = ['https://hex.pm/packages?sort=updated_at']
+    start_urls = ['https://hex.pm/packages?sort=updated_at',
+                  'https://hex.pm/packages?sort=inserted_at']
     allowed_domains = ['hex.pm']
     
     def parse(self, response):

@@ -4,7 +4,8 @@ import  dateutil.parser
 class PythonSpider(XMLFeedSpider):
     name = 'python-spider'
     allowed_domains = ['pypi.python.org']
-    start_urls = ['https://pypi.python.org/pypi?%3Aaction=rss']
+    start_urls = ['https://pypi.python.org/pypi?%3Aaction=rss',
+                  'https://pypi.python.org/pypi?%3Aaction=packages_rss']
     iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
     itertag = 'item'
 
