@@ -23,6 +23,5 @@ for line in sys.stdin:
   package = json.loads(line)
   if "description" not in package or "name" not in package or "url" not in package or not package["name"] or not package["description"] or not package["url"]:
     continue
-  
   row = "| [%s](%s) | %s |" % (clean_text(package["name"]), package["url"], clean_text(package["description"]))
   print(row)
