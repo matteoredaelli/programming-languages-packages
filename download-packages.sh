@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-for lang in nodejs python r ; do
+. ./common-env.sh
+
+for lang in $LANGUAGES; do
   echo Processing lang ${lang}
   spiders/go-${lang}.sh
 done
