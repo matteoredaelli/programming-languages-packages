@@ -25,4 +25,6 @@ for package in results['results']:
             item["day"] = package["doc"]["time"]["modified"][:10]
         if "license" in package["doc"]:
             item["license"] = package["doc"]["license"]
+        if "homepage" in package["doc"]:
+            item["url"] = package["doc"]["homepage"]
         print(json.dumps(item))

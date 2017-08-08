@@ -17,12 +17,12 @@ layout: default
 print(header)
 
 def clean_text(text):
-  return text.replace("|", " ").replace("#", " ")
+  return text.replace("|", " ").replace("#", " ").replace("["," ").replace("]", " ").replace("("," ").replace(")", " ").replace("\n", " ").replace("\r", " ")
   
 for line in sys.stdin:
   package = json.loads(line)
-  if "description" not in package or "name" not in package or not package["name"] or not package["description"]:
+  if "description" not in package or "name" not in package or "url" not in package or not package["name"] or not package["description"] or not package["url"]:
     continue
   
-  row = "| %s | %s |" % (clean_text(package["name"]), clean_text(package["description"]))
+  row = "| [%s](%s) | %s |" % (clean_text(package["name"]), package["url"], clean_text(package["description"]))
   print(row)

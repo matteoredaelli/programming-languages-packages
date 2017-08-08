@@ -17,5 +17,6 @@ class PythonSpider(XMLFeedSpider):
         item['name'] = name_rel[0]
         item['release'] = name_rel[1]
         item['description'] = node.xpath('description/text()').extract_first()
+        item['url'] = node.xpath('link/text()').extract_first()
         item['language'] = 'Python'
         yield item
