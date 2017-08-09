@@ -7,7 +7,7 @@ def clean_text(text):
   return text.replace("|", " ").replace("#", " ").replace("["," ").replace("]", " ").replace("("," ").replace(")", " ").replace("\n", " ").replace("\r", " ")
 
 lang = sys.argv[1]
-timestamp = '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+timestamp = '{:%Y-%m-%d %H:%M:%S %Z}'.format(datetime.datetime.now())
 
 header="""---
 layout: default
