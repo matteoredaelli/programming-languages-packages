@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for lang in elixir haskell lua php python r
+for lang in dotnet elixir haskell lua php python r
 do
   file="data/$lang.json"
   touch $file
