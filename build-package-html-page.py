@@ -2,9 +2,7 @@ import json
 import sys
 import datetime
 
-
-def clean_text(text):
-  return text.replace("|", " ").replace("#", " ").replace("["," ").replace("]", " ").replace("("," ").replace(")", " ").replace("\n", " ").replace("\r", " ")
+from utils import clean_text
 
 lang = sys.argv[1]
 timestamp = '{:%Y-%m-%d %H:%M:%S %Z}'.format(datetime.datetime.now())
