@@ -39,8 +39,10 @@ fname = "data/%s-github-trendy.json" % lang
 with open(fname) as f: 
     for line in f:
         package = json.loads(line)
-        if "description" not in package or "name" not in package or "url" not in package or not package["name"] or not package["description"] or not package["url"]:
+        if "description" not in package or "name" not in package or "url" not in package or not package["name"]  or not package["url"]:
             continue
+        if package["description"] is None:
+            package["description"]  = ""
         row = "| [%s](%s) | %s |" % (clean_text(package["name"]), package["url"], clean_text(package["description"]))
         print(row)
 
@@ -50,7 +52,9 @@ fname = "data/%s.json" % lang
 with open(fname) as f: 
     for line in f:
         package = json.loads(line)
-        if "description" not in package or "name" not in package or "url" not in package or not package["name"] or not package["description"] or not package["url"]:
+        if "description" not in package or "name" not in package or "url" not in package or not package["name"] or not package["url"]:
             continue
+        if package["description"] is None:
+            package["description"]  = ""
         row = "| [%s](%s) | %s |" % (clean_text(package["name"]), package["url"], clean_text(package["description"]))
         print(row)

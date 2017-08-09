@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-lang=python
+lang=$1
 file="data/$lang.json"
 touch $file
 rm $file
