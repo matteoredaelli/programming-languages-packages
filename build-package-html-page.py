@@ -5,6 +5,7 @@ import datetime
 from utils import clean_text
 
 lang = sys.argv[1]
+lang_git = sys.argv[2]
 timestamp = '{:%Y-%m-%d %H:%M:%S %Z}'.format(datetime.datetime.now())
 
 header="""---
@@ -27,7 +28,7 @@ header_trendy="""
 [Trendy %s repositories](https://github.com/trending/%s?since=daily)
 
 | Repository   | Description       |
-|:-------------|:------------------|""" % (lang, lang, lang)
+|:-------------|:------------------|""" % (lang, lang, lang_git)
 
 
 print(header)
