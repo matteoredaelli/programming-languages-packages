@@ -10,11 +10,12 @@ timestamp = '{:%Y-%m-%d %H:%M:%S %Z}'.format(datetime.datetime.now())
 
 header="""---
 layout: default
+title: %s packages
 ---
 
 Last update: %s
 
-""" % timestamp
+""" % (lang, timestamp)
 
 header_packages="""
 ## %s packages
