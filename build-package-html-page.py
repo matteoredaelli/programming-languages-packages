@@ -13,7 +13,7 @@ layout: default
 title: %s packages
 ---
 
-%s: [trendy](#trendy) and [latest](#latest) repositories (last update %s)
+%s: [trendy](#trendy) and [latest](#latest) repositories - updated %s
 """ % (lang, lang, timestamp)
 
 header_packages="""
