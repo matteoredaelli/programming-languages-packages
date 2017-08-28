@@ -13,10 +13,8 @@ layout: default
 title: %s packages
 ---
 
-Last update: %s
-
-[Trendy](#trendy) and [latest](#latest) repositories
-""" % (lang, timestamp)
+%s: [trendy](#trendy) and [latest](#latest) repositories (last update %s)
+""" % (lang, lang, timestamp)
 
 header_packages="""
 ## <a id="latest"></a>%s packages
