@@ -15,16 +15,17 @@ title: %s packages
 
 Last update: %s
 
+[Trendy](#trendy) and [latest](#latest) repositories
 """ % (lang, timestamp)
 
 header_packages="""
-## %s packages
+## <a id="latest"></a>%s packages
 
 | Package      | Description       |
 |:-------------|:------------------|""" % lang
 
 header_trendy="""
-## %s trendy repositories
+## <a id="trendy"></a>%s trendy repositories
 
 [Trendy %s repositories](https://github.com/trending/%s?since=daily)
 
