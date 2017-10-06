@@ -8,4 +8,4 @@ for l in $LANGUAGES; do
     echo Processing lang ${lang}
     python3 build-package-html-page.py ${lang} ${lang_git} > www/${lang}-packages.md
 done
-cd www && jekyll build
+cd www && jekyll build --incremental
