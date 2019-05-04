@@ -13,7 +13,7 @@ class ClojureSpider(scrapy.Spider):
             #day = package.xpath('./span[@class="created_at"]/text()').extract_first()
             #maintainer = package.xpath('./a[@class="author"]/text()').extract_first()
             #release = package.xpath('./span[@class="version_name"]/text()').extract_first()
-            description = response.xpath('.//p[@class="recent-jar-description"]/text()').extract_first().strip()
+            description = package.xpath('.//p[@class="recent-jar-description"]/text()').extract_first().strip()
             yield {'language': 'Clojure',
                        #'day': day.strip(),
                        'name': name,
